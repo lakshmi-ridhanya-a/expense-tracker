@@ -1,0 +1,188 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #f4f8fb;
+  color: #333;
+}
+
+.container {
+  padding: 30px;
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  color: #2b5876;
+}
+
+.button-group {
+  margin-bottom: 30px;
+}
+
+.action-btn {
+  padding: 10px 20px;
+  border: none;
+  margin: 0 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.income {
+  background: #28a745;
+  color: #fff;
+}
+
+.expense {
+  background: #dc3545;
+  color: #fff;
+}
+
+.history {
+  background: #007bff;
+  color: #fff;
+}
+
+.action-btn:hover {
+  opacity: 0.85;
+  transform: scale(1.05);
+}
+
+.form-popup {
+  display: none;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  padding: 20px;
+  max-width: 400px;
+  margin: 20px auto;
+  position: relative;
+  z-index: 10;
+}
+
+.form-popup input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.submit-btn, .close-btn {
+  background: #28a745;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.close-btn {
+  background: #888;
+}
+
+.chart-container {
+  position: relative;
+  width: 300px;
+  margin: 0 auto 40px;
+}
+
+#expenseChart {
+  width: 100% !important;
+  height: auto !important;
+}
+
+.net-balance {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Transaction History Styling */
+/* Transaction History Styling - Updated */
+.history-box {
+  padding: 20px;
+  border-radius: 10px;
+  background: #ffffff;
+  max-height: 400px;
+  overflow-y: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.history-box h2 {
+  margin-bottom: 20px;
+  font-size: 1.6rem;
+  color: #2b5876;
+  text-align: center;
+}
+
+.history-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.history-list li {
+  background: #f8f9fa;
+  padding: 15px 20px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  transition: 0.3s ease;
+}
+
+.history-list li:hover {
+  transform: scale(1.02);
+}
+
+.history-list li.income {
+  border-left: 6px solid #28a745;
+}
+
+.history-list li.expense {
+  border-left: 6px solid #dc3545;
+}
+
+.transaction-info {
+  display: flex;
+  flex-direction: column;
+  color: #343a40;
+  font-size: 15px;
+}
+
+.transaction-info span.date {
+  font-weight: bold;
+  color: #6c757d;
+  font-size: 13px;
+  margin-bottom: 4px;
+}
+
+.transaction-info span.desc {
+  font-size: 15px;
+}
+
+.transaction-amount {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.transaction-amount.income {
+  color: #28a745;
+}
+
+.transaction-amount.expense {
+  color: #dc3545;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Expense Tracker</h1>
+    <div class="button-group">
+      <button id="incomeBtn" class="action-btn income">Add Income</button>
+      <button id="expenseBtn" class="action-btn expense">Add Expense</button>
+      <button id="historyBtn" class="action-btn history">Transaction History</button>
+    </div>
+
+    <div class="form-popup" id="formPopup">
+      <form id="transactionForm">
+        <h2 id="formTitle">Add Transaction</h2>
+        <input type="date" id="date" required />
+        <input type="text" id="category" placeholder="Category (e.g. Food)" required />
+        <input type="number" id="amount" placeholder="Amount" required />
+        <input type="text" id="description" placeholder="Description (optional)" />
+        <button type="submit" class="submit-btn">Save</button>
+        <button type="button" id="closeForm" class="close-btn">Close</button>
+      </form>
+    </div>
+
+    <!-- CHART -->
+    <div class="chart-container">
+      <canvas id="expenseChart"></canvas>
+      <div class="net-balance" id="netBalanceDisplay">$0</div>
+    </div>
+
+    <!-- HISTORY MODAL -->
+    <div class="form-popup" id="historyPopup">
+      <div class="history-box">
+        <h2>Transaction History</h2>
+        <ul id="historyList" class="history-list"></ul>
+        <button id="closeHistory" class="close-btn">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
